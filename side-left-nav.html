@@ -1,0 +1,381 @@
+<script>
+    $(function() {
+        // ==========================
+        // 侧边导航下拉列表
+        // ==========================
+        $('.tpl-left-nav-link-list').on('click', function() {
+            alert("ddd");
+            $(this).siblings('.tpl-left-nav-sub-menu').slideToggle(80)
+                .end()
+                .find('.tpl-left-nav-more-ico').toggleClass('tpl-left-nav-more-ico-rotate');
+        })
+    })
+</script>
+
+<style>
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    input {
+        border: none;
+    }
+    
+    a {
+        color: #337ab7;
+    }
+    
+    a:hover {
+        cursor: pointer;
+        color: #23527c;
+    }
+    
+    [class^=m-icon-] {
+        width: 14px;
+        height: 14px;
+        margin-top: 3px;
+        line-height: 14px;
+        vertical-align: top;
+    }
+    
+    .m-icon-swapright {
+        background-position: -27px -10px;
+    }
+    
+    .m-icon-white {
+        background-image: url(../img/syncfusion-icons-white.png);
+    }
+    
+    .tpl-color-success {
+        color: #36c6d3;
+    }
+    
+    .tpl-color-danger {
+        color: #ed6b75;
+    }
+    
+    .tpl-color-warning {
+        color: #F1C40F;
+    }
+    
+    .tpl-color-primary {
+        color: #8E44AD;
+    }
+    
+    .tpl-badge-success {
+        background-color: #36c6d3!important;
+    }
+    
+    .tpl-badge-danger {
+        background-color: #ed6b75!important;
+    }
+    
+    .tpl-badge-warning {
+        background-color: #F1C40F!important;
+    }
+    
+    .tpl-badge-primary {
+        background-color: #8E44AD!important;
+    }
+    
+    .tpl-header-list li {
+        color: #999;
+        border-bottom: 1px solid #F1F4F7;
+    }
+    
+    .tpl-header-list li:last-child {
+        border-bottom: none;
+    }
+    
+    .tpl-header-list li:hover {
+        background: #f9fafc;
+    }
+    
+    .tpl-header-list-link {
+        color: #999!important;
+    }
+    
+    .tpl-header-list-user-nick {
+        color: #7FB0DA;
+    }
+    
+    .tpl-header-list-user-nick {
+        color: #7FB0DA;
+    }
+    
+    .tpl-header-list-user-ico img {
+        margin-left: 5px;
+        margin-top: -4px;
+        height: 39px;
+        display: inline-block;
+        border-radius: 50%;
+    }
+    
+    .tpl-header-list-ico-out-size {
+        font-size: 16px;
+    }
+    
+    .tpl-left-nav {
+        width: 235px;
+        float: left;
+        background: #fff;
+        border-radius: 6px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        padding-bottom: 20px;
+    }
+    
+    .tpl-left-nav-title {
+        height: 50px;
+        padding: 25px 15px 10px;
+        color: #5C9ACF;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    
+    .tpl-left-nav-list {
+        width: 235px;
+    }
+    
+    .tpl-left-nav-item {}
+    
+    .tpl-left-nav-item .nav-link {
+        display: block;
+        position: relative;
+        margin: 1px 0 0;
+        border: 0;
+        padding: 12px 15px;
+        padding-top: 6px;
+        text-decoration: none;
+        color: #485a6a;
+        font-size: 14px;
+    }
+    
+    .tpl-left-nav-item .nav-link span,
+    .tpl-left-nav-sub-menu a span {
+        font-size: 14px;
+        font-weight: 400;
+        color: #485a6a;
+    }
+    
+    .tpl-left-nav-item .nav-link i,
+    .tpl-left-nav-sub-menu a i {
+        font-size: 20px;
+        position: relative;
+        text-shadow: none;
+        font-weight: 300;
+        top: 2px;
+        margin-left: 1px;
+        margin-right: 6px;
+        color: #a7bdcd;
+    }
+    
+    .tpl-left-nav-item .nav-link:hover {
+        background: #f2f6f9;
+        color: #5b9bd1;
+        border-left: 3px solid #5C9ACF!important;
+        margin-left: -3px;
+        padding-left: 15px;
+    }
+    
+    .tpl-left-nav-item .nav-link:hover i,
+    .tpl-left-nav-sub-menu a:hover i {
+        color: #5b9bd1;
+    }
+    
+    .tpl-left-nav-item .nav-link:hover span,
+    .tpl-left-nav-sub-menu a:hover span {
+        color: #5b9bd1;
+    }
+    
+    .tpl-left-nav-item .nav-link.active {
+        border-left: 3px solid #5C9ACF!important;
+        background: #f2f6f9;
+        margin-left: -3px;
+        padding-left: 15px;
+    }
+    
+    .tpl-left-nav-item .nav-link.active span,
+    .tpl-left-nav-item .nav-link.active i {
+        color: #5b9bd1;
+    }
+    
+    .tpl-left-nav-sub-menu {
+        list-style: none;
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .tpl-header-nav-hover-ico {
+        color: #C0CDDC!important;
+        font-size: 19px!important;
+    }
+    
+    .tpl-left-nav-more-ico {
+        -webkit-transition: all 300ms;
+        transition: all 300ms;
+        font-size: 16px!important;
+        top: 4px!important;
+    }
+    
+    .tpl-left-nav-more-ico-rotate {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-transition: all 300ms;
+        transition: all 300ms;
+    }
+    
+    .tpl-left-nav-sub-menu a {
+        display: block;
+        margin: 0;
+        padding: 4px 14px 9px 30px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        background: 0 0;
+    }
+    
+    .tpl-left-nav-sub-menu a:hover,
+    .tpl-left-nav-sub-menu a.active {
+        color: #5b9bd1;
+        background: #f2f6f9!important;
+    }
+    
+    .tpl-left-nav-sub-menu a.active i,
+    .tpl-left-nav-sub-menu a.active span {
+        color: #5b9bd1;
+        background: #f2f6f9!important;
+    }
+    
+    .tpl-left-nav-content-ico {
+        font-size: 14px!important;
+        position: relative;
+        top: 8px!important;
+        color: #ffbe40!important;
+    }
+    
+    .tpl-left-nav-content {
+        background-color: #36c6d3;
+        border-radius: 1000px;
+        color: #fff!important;
+        padding: 0px 8px!important;
+        float: right;
+        position: relative;
+        font-style: normal;
+        font-family: "微软雅黑";
+        top: 10px!important;
+        font-size: 12px!important;
+    }
+    
+    @media screen and (max-width: 1000px) {
+        .tpl-left-nav-hover {
+            display: none;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .tpl-left-nav-list {
+            width: 100%;
+        }
+        .tpl-content-wrapper {
+            padding-left: 0;
+        }
+    }
+</style>
+
+<div class="tpl-left-nav tpl-left-nav-hover">
+    <div class="tpl-left-nav-title">
+        Amaze UI 列表
+    </div>
+    <div class="tpl-left-nav-list">
+        <ul class="tpl-left-nav-menu">
+            <li class="tpl-left-nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="am-icon-home"></i>
+                    <span>首页</span>
+                </a>
+            </li>
+            <li class="tpl-left-nav-item">
+                <a href="chart.html" class="nav-link tpl-left-nav-link-list active">
+                    <i class="am-icon-bar-chart"></i>
+                    <span>数据表</span>
+                    <i class="tpl-left-nav-content tpl-badge-danger">
+               12
+             </i>
+                </a>
+            </li>
+
+            <li class="tpl-left-nav-item">
+                <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                    <i class="am-icon-table"></i>
+                    <span>表格</span>
+                    <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                </a>
+                <ul class="tpl-left-nav-sub-menu">
+                    <li>
+                        <a href="table-font-list.html">
+                            <i class="am-icon-angle-right"></i>
+                            <span>文字表格</span>
+                            <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
+                        </a>
+
+                        <a href="table-images-list.html">
+                            <i class="am-icon-angle-right"></i>
+                            <span>图片表格</span>
+                            <i class="tpl-left-nav-content tpl-badge-success">
+               18
+             </i>
+
+                        </a>
+                        <a href="form-news.html">
+                            <i class="am-icon-angle-right"></i>
+                            <span>消息列表</span>
+                            <i class="tpl-left-nav-content tpl-badge-primary">
+               5
+             </i>
+
+
+                        </a>
+                        <a href="form-news-list.html">
+                            <i class="am-icon-angle-right"></i>
+                            <span>文字列表</span>
+
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="tpl-left-nav-item">
+                <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                    <i class="am-icon-wpforms"></i>
+                    <span>表单</span>
+                    <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                </a>
+                <ul class="tpl-left-nav-sub-menu">
+                    <li>
+                        <a href="form-amazeui.html">
+                            <i class="am-icon-angle-right"></i>
+                            <span>Amaze UI 表单</span>
+                            <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
+                        </a>
+
+                        <a href="form-line.html">
+                            <i class="am-icon-angle-right"></i>
+                            <span>线条表单</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="tpl-left-nav-item">
+                <a href="login.html" class="nav-link tpl-left-nav-link-list">
+                    <i class="am-icon-key"></i>
+                    <span>登录</span>
+
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
